@@ -1,0 +1,369 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+}
+button{
+	cursor: pointer;
+	outline: none;
+}
+.hidden{
+	display: none;
+}
+.playerContainer{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(58, 58, 58, 0.71);
+    z-index: 10000;
+}
+.loader{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99999;
+    background-color: rgba(8, 8, 8, 0.5);
+}
+.loaderImg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -12px;
+    margin-top: -12px;
+}
+.noVideos{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -73px;
+    margin-top: -47px;
+    text-align: center;
+}
+.player{
+    width: 900px;
+    height: 500px;
+    margin: auto;
+    margin-top: 100px;
+    background-color: black;
+}
+.player iframe{
+    margin: 8px 25px;
+}
+.beforeLogin{
+	position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+.loginPrompt{
+    text-align: center;
+    position: absolute;
+    margin: auto;
+    width: 500px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    margin-top: -250px;
+    margin-left: -250px;
+}
+header div{
+	display: inline-block;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    z-index: 999;
+    background-color: white;
+    border-bottom: 1px solid #d3d3d3;
+}
+#searchBar{
+    position: relative;
+    width: 500px;
+    margin-left: 385px;
+    margin-top: 5px;
+}
+.search{
+    width: inherit;
+    height: 35px;
+    font-size: 15px;
+    border: 1px solid #d3d3d3;
+    padding: 1px 5px 1px 35px;
+    outline: none;
+    -webkit-box-shadow: inset -2px 0px 19px 6px rgba(230,230,230,0.21);
+    -moz-box-shadow: inset -2px 0px 19px 6px rgba(230,230,230,0.21);
+    box-shadow: inset -2px 0px 19px 6px rgba(232, 232, 232, 0.21);
+    border-radius: 5px;
+    font-size: 18px;
+}
+.search_icon{
+    position: absolute;
+    width: 15px;
+    left: 10px;
+    height: 20px;
+    background-size: 17px;
+    background-image: url('../images/icons1.png');
+    top: 10px;
+}
+.submit{
+	width: 55px;
+    height: 29px;
+    padding: 0;
+    border: solid 1px transparent;
+    border-color: #d3d3d3;
+    background: #f8f8f8;
+    vertical-align: bottom;
+    border-radius: 2px;
+}
+#links{
+	float: right;
+	margin-top: 10px;
+	margin-right: 50px;
+}
+.toggleAppsDiv{
+    width: 30px;
+    height: 30px;
+    border: 0px;
+    background: url('../images/sprite.png') -7px -252px no-repeat;
+    background-color: white;
+    opacity: 0.55;
+    transition: 0.2s ease-in;
+}
+.toggleAppsDiv:hover{
+	opacity: 1;
+}
+.apps{
+    position: absolute;
+    top: 56px;
+    right: 35px;
+    width: 300px;
+    border: 1px solid #d3d3d3;
+    height: 250px;
+    border-top: 0;
+    z-index: 9999;
+    background-color: white;
+}
+.appsTriangle{
+	position: absolute;
+	height: 5px;
+    top: -5px;
+    border-bottom: 1px solid #d3d3d3;
+}
+#left{
+    width: 268px;
+}
+#triangle{
+	position: absolute;
+    top: -12px;
+    right: 25px;
+    transform: rotate(-90deg);
+    color: #d3d3d3;
+}
+#triangle::before{
+	content: '\3e';
+}
+#right{
+    width: 26px;
+    right: 0;
+}
+.navs div{
+   text-align: center;
+    width: 90px;
+    height: 50px;
+    margin: 10px 24px;
+}
+.navs p{
+    margin: 0;
+    font-size: 0.8em;
+    transition: 0.2s ease-in;
+}
+.navs div:hover{
+    color: red;
+}
+.buttons{
+    border: 0;
+    width: 50px;
+    height: 50px;
+}
+#popular{
+    background: url('../images/popular.png') 10px no-repeat;
+}
+#liked{
+    background: url('../images/sprite.png') 6px -208px no-repeat;
+}
+#history{
+    background: url('../images/history.png') 6px no-repeat;
+    background-size: 32px;
+}
+#later{
+    background: url('../images/later.png') 10px no-repeat;
+}
+#uploads{
+    background: url('../images/sprite.png') -60px -222px no-repeat;
+}
+#container{
+    margin: 50px 50px 0 50px;
+	padding: 15px;
+    min-width: 1200px;
+}
+.card{
+    margin: 10px 44px;
+	position: relative;
+	display: inline-block;
+	width: 300px;
+	height: 200px;
+	border: 1px solid #d3d3d3;
+    vertical-align: top;
+}
+.viewCount{
+	position: absolute;
+    width: auto;
+    height: 20px;
+    top: 20px;
+    color: white;
+    font-size: 0.8em;
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+    background: rgba(19, 18, 18, 0.64);
+}
+.viewCount span{
+    vertical-align: middle;
+}
+.icon{
+	width: 280px;
+	height: 160px;
+    margin: 5px 10px 0 10px;
+}
+.thumbnail{
+	width: 280px;
+	height: 160px;
+}
+.play{
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: transparent;
+    border: 0;
+    background: url('../images/sprite.png') -36px -444px no-repeat;
+    width: 51px;
+    height: 36px;
+    outline: none;
+    margin-top: -30px;
+    margin-left: -26px;
+    opacity: 0.6;
+}
+.play:hover{
+    opacity: 1;
+}
+.title{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 255px;
+    white-space: nowrap;
+    font-weight: 500;
+    padding: 7px 0 0 10px;
+}
+.expand{
+	position: absolute;
+	border: 0;
+	background-color: transparent;
+	bottom: 14px;
+    right: 15px;
+    width: 10px;
+    height: 10px;
+   background: url('../images/sprite.png') -12px -295px no-repeat;
+}
+footer{
+    text-align: center;
+}
+.more{
+    height: 35px;
+}
+#expanded{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 400px;
+    background-color: #e6e6e6;
+}
+#expanded table{
+    height: 100%;
+}
+#expanded table p,#expanded table h4{
+    margin: 0;
+    display:inline-block;
+    margin-right: 40px;
+}
+.thumbnailLarge{
+    position: relative;
+    padding-left: 25px;
+    padding-right: 15px;
+    border-right: 1px solid #d3d3d3;
+}
+.details{
+    padding-left: 30px;
+    padding-right: 25px;
+}
+.details div:not(.description){
+    padding: 10px 25px;
+}
+.details div>div{
+     border-bottom: 1px solid #d3d3d3;
+}
+.description{
+    width: 95%;
+    height: 200px;
+    overflow-y: scroll;
+    overflow-x: auto;
+    padding: 10px 19px;
+}
+.triangleLarge{
+    position: absolute;
+    top: -20px;
+    width: 300px;
+}
+.playLarge{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: transparent;
+    border: 0;
+    background: url('../images/sprite.png') -36px -444px no-repeat;
+    width: 51px;
+    height: 36px;
+    opacity: 0.6;
+    margin-left: -23px;
+    margin-top: -16px;
+}
+.playLarge:hover{
+    opacity: 1;
+}
+.triangleLarge img{
+    width: 30px;
+    height: 30px;
+    margin-left: 170px;
+}
+.removeDetail{
+    border: 0;
+    background: 0;
+    font-size: 1.5em;
+    position: absolute;
+    right: 0;
+}
+.removeDetail:hover{
+    color: red;
+}
+.title_detail{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 700px;
+    white-space: nowrap;
+    font-weight: 500;
+}
