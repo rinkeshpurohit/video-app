@@ -5,11 +5,12 @@
 		this.$container = $('#container');
 		this.$apps = $('.apps');
 		this.$toggleAppsDiv = $('.toggleAppsDiv');
-		this.$playerContainer = $('.playerContainer');
 		this.$more = $('.more');
 		this.$loader = $('.loader');
+		this.$playerContainer = $('.playerContainer');
 		this.$cardTemplate = Handlebars.compile($('#cardTemplate').html());
 		this.largeCard = Handlebars.compile($('#largeCard').html());
+		this.videoPlayer = Handlebars.compile($('#videoPlayer').html());
 		this.noVideos = Handlebars.compile($('#noVideos').html());
 	}
 	View.prototype={
@@ -93,14 +94,13 @@
 			this.$more.removeData();
 		},
 		addPlayer : function(id) {
-			var url = "http://www.youtube.com/embed/"+id+"?autoplay=1";
-			this.$playerContainer.find('iframe').attr('src', url);
+			this.$playerContainer.html(this.videoPlayer({videoId : id}));
 		},
 		togglePlayerContainerVisibility : function () {
 			this.$playerContainer.toggleClass('hidden');
 		},
 		removePlayer : function() {
-			this.$playerContainer.find('iframe').attr('src', '');
+			this.$playerContainer.empty();
 		},
 		appendExpandedCard : function(obj,pos) {
 			this.$container.find('.card').eq(pos-1).after(this.largeCard(obj));
